@@ -12,6 +12,6 @@ CREATE TABLE products (
 	id INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
 	price INT(255) NOT NULL,
-	in_stockck BOOLEAN DEFAULT true,
+	in_stock BOOLEAN DEFAULT true,
 	PRIMARY KEY (id)
 );
