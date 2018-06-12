@@ -1,0 +1,20 @@
+{
+  "name": "swurveecurvee",
+  "version": "1.0.0",
+  "description": "E-commerce website for women's clothing line",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonao/SwurveeCurvee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonao/SwurveeCurvee/issues"
+  },
+  "homepage": "https://github.com/brandonao/SwurveeCurvee#readme"
+}
