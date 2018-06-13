@@ -1,0 +1,22 @@
+#sign-in {
+    padding: 20px 15px;
+}
+
+#register {
+    padding: 20px 15px;
+}
+
+/* #sign-in-promo-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+} */
+
+
+.or {
+    text-align: center;
+}
+
+.api-login {
+    margin-bottom: 15px;
+}
