@@ -22,7 +22,7 @@
     padding: 0 20px;
 }
 
-.dropdown-menu {
+.masthead-dropdown {
     width: 100%;
     border-style: none;
 }
@@ -63,8 +63,18 @@
     transform: translate(-50%, -50%);
 }
 
-.favorites {
-    text-align: center;
+.favorites, .insta, .recommended{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title:before, .title:after {
+    content: '';
+    width: 150px;
+    height: 2px;
+    margin: 0px 10px;
+    background: lightgray;
 }
 
 .fav-pic1, .fav-pic2, .fav-pic3, .fav-pic4 {
