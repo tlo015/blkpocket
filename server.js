@@ -21,10 +21,10 @@ app.engine("handlebars", expbhs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and vie the server access to them
-var main = require("./routes/main");
+var index = require("./routes/index");
 var products = require("./routes/products")
 
-app.use("/", main);
+app.use("/", index);
 app.use("/products", products)
 
 app.listen(PORT, function() {
