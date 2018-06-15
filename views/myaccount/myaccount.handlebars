@@ -1,0 +1,190 @@
+<link rel="stylesheet" href="/assets/css/myaccount.css">
+{{> nav }} 
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Hi *INSERT CUSTOMER NAME HERE*</h5>
+
+                <!-- 
+                    EDIT MY ACCOUNT
+                    TRACK ORDER 
+                    ORDER NUMBER
+                    EMAIL ADDRESS
+                    CHECK STATUS 
+                -->
+                <ul class="nav nav-tabs flex-column" id="my-account" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="my-profile-tab" data-toggle="tab" href="#my-profile" role="tab" aria-controls="my-profile" aria-selected="true">My Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="billing-tab" data-toggle="tab" href="#billing" role="tab" aria-controls="billing" aria-selected="false">Billing and Shipping</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="order" aria-selected="false">My Orders</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="favorites-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">My Favorites</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="service-tab" data-toggle="tab" href="#service" role="tab" aria-controls="service" aria-selected="false">Customer Service</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-9">
+                <!-- My Profile: Name, membership ID, email, password, birthday,   -->
+                <div class="tab-content" id="my-account-content">
+                    <div class="tab-pane fade show active" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
+                        <div class="container" id="profile">
+                            <h5>My Profile</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="user-f-name">First Name</label>
+                                    <input type="text" class="form-control" id="user-first-name" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-l-name">Last Name</label>
+                                    <input type="text" class="form-control" id="user-last-name" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-em">Email</label>
+                                    <input type="ctext" class="form-control" id="user-email" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-em-cfm">Confirm Email</label>
+                                    <input type="text" class="form-control" id="user-email-cfm" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-pass">Password</label>
+                                    <input type="text" class="form-control" id="user-password" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-pass-cfm">Confirm Password</label>
+                                    <input type="text" class="form-control" id="user-password-cfm" placeholder="">
+                                </div>
+        
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>   
+                    </div>
+                    
+                    <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+                        <!-- Billing and Shipping: Name, Mobile, Address, Billign only: cardtype, cardnumber, expiration date -->
+                        <div class="container" id="bill-and-ship">
+                            <h5>Billing and Shipping</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5> Billing Address</h5>
+                                    <p>Name:</p>
+                                    <p>Address Line 1:</p>
+                                    <p>Address Line 2:</p>
+                                    <p>City: </p>
+                                    <p>State: </p>
+                                    <p>Zip Code: </p>
+                                    <p>Phone: </p>
+                                    <p>Email Address: </p>
+                                    <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Delete</button>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h5> Shipping Address</h5>
+                                    <p>Name:</p>
+                                    <p>Address Line 1:</p>
+                                    <p>Address Line 2:</p>
+                                    <p>City: </p>
+                                    <p>State: </p>
+                                    <p>Zip Code: </p>
+                                    <p>Phone: </p>
+                                    <p>Email Address: </p>
+                                    <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
+                        <!-- My Orders: Order Date, Order Number, Items. Order Total, Shipping Method, Status -->
+                        <div class="container" id="orders">
+                            <h5>My Orders</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order Date</th>
+                                        <th scope="col">Order Number</th>
+                                        <th scope="col">Items</th>
+                                        <th scope="col">Order Total</th>
+                                        <th scope="col">Shipping Method</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="favorites" role="tabpanel" aria-labelledby="favorites-tab">
+                        <div class="container" id="orders">
+                            <h5>My Favorites</h5>
+                            <div class="row">
+                                <img class="col-md-3 acc-fav-img" id="fav-img1" src="public/assets/img/sample-img.png">
+                                <img class="col-md-3 acc-favimg" id="fav-img2" src="public/assets/img/sample-img.png">
+                                <img class="col-md-3 acc-fav-img" id="fav-img3" src="public/assets/img/sample-img.png">
+                                <img class="col-md-3 acc-fav-img" id="fav-img4" src="public/assets/img/sample-img.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="service" role="tabpanel" aria-labelledby="service-tab">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+        <!-- FOOTER -->
+    <!-- DESIGNED BY -->
+    <footer class="container-fluid">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h7>ABOUT US</h7>
+                <p>About</p>
+                <p>Become and Affliliate</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>INFORMATION</h7>
+                <p>Delivery</p>
+                <p>Terms and Conditions</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>HELP</h7>
+                <p>Track My Order</p>
+                <p>Size Guide</p>
+            </div>
+        </div>
+        </div>
+        <p class="copyright">Copyright @2018 Designed by: </p>
+    </footer>

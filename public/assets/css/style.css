@@ -1,8 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 250px;
+}
+
+button {
+    outline-style: none;
+}
 
 /* NAVIGATION */
 /* SHOPPING CART + LOGIN BANNER */
-#banner ul li{
-    display: inline;
+.my-cart-masthead{
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    padding: 10px 10px 20px 10px;
+}
+
+#in-cart{
+    width: 35%;
+}
+
+#in-cart-item-summary {
+    margin: 10px 0px;
+}
+
+.in-cart-subtotal {
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    border-top-width: 2px;
+    padding: 20px 10px 10px 10px;
+}
+
+.in-cart-img {
+    width: 100%;
+    height: auto;
 }
 
 /* COMPANY NAME LOGO */
@@ -48,6 +89,7 @@
     height: 400px;
     position: relative;
     text-align: center;
+    margin-top: 15px;
 }
 
 #trend-pic {
@@ -79,6 +121,7 @@
 
 .fav-pic1, .fav-pic2, .fav-pic3, .fav-pic4 {
     width: 100%;
+    height: auto;
 }
 
 /* HERO */
@@ -182,5 +225,21 @@
 
 /* INSTAGRAM */
 .insta{
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 175px;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    border-top-width: 2px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.copyright {
     text-align: center;
 }

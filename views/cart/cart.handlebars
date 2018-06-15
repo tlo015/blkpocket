@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/assets/css/cart.css">
+{{> nav }} 
+
+<br>
+
+    <div class="container shopping-cart">
+        <div class="row">
+            <div class="col-md-9">
+                <h5>SHOPPING BAG</h5> 
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <img class="in-cart-img" id="add-img1" src="/assets/img/sample-img.png">
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>PRODUCT NAME</p>
+                        <p>Size: </p>
+                        <p>Color: </p>
+                        <button class="shopping-btn btn-light btn-outline-secondary">EDIT</button>
+                        <button class="shopping-btn btn-light btn-outline-secondary">ADD TO WISHLIST</button>
+                        <button class="shopping-btn btn-light btn-outline-secondary">REMOVE</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p>Quantity</p>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <select class="form-control" id="sel1" name="sellist1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-1">
+                        <P>Price</P>
+                        <p>$0.00</p>
+                    </div>
+                </div> 
+                
+            </div>
+
+            <div class="col-md-3">
+                <h5>ORDER SUMMARY</h5>
+                <p>Subtotal</p>
+                <p>Shipping</p>
+                <p>Ship to</p>
+                <p>Estimated Tax</p>
+                <p>Estimated Total</p>
+
+                <hr>
+                <p class="promo">Have a promo code?</p>
+                <div class="input-group promocode">
+                    <input type="text" name="order-coupon-code" class="form-control valid" id="order-promocode" placeholder="Enter Here" aria-incalid="false">
+                    <button type="submit" value="order-coupon-code" name="order-add-coupon" class="btn-light btn-outline-secondary" id="order-coupon">Apply</button>
+                </div>
+
+                <button type="submit" class="paypal-btn btn-block btn-light btn-outline-secondary">CHECK OUT WITH PAYPAL</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <!-- DESIGNED BY -->
+    <footer class="container-fluid">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h7>ABOUT US</h7>
+                <p>About</p>
+                <p>Become and Affliliate</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>INFORMATION</h7>
+                <p>Delivery</p>
+                <p>Terms and Conditions</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>HELP</h7>
+                <p>Track My Order</p>
+                <p>Size Guide</p>
+            </div>
+        </div>
+        </div>
+        <p class="copyright">Copyright @2018 Designed by: </p>
+    </footer>
+    
