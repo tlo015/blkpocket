@@ -12,3 +12,8 @@
     width: 100%;
     height: auto;
 }
+
+.category-name, .category-price{
+    text-align: center;
+    color: black;
+}

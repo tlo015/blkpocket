@@ -20,3 +20,8 @@
 .product-care {
     height: 400px;
 }
+
+.product-name, .product-price{
+    text-align: center;
+    color: black;
+}
