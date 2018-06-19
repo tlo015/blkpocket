@@ -1,3 +1,3 @@
-exports.index= function(req, res) {
+exports.cart= function(req, res) {
     res.render("payment/cart");
 };

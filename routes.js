@@ -1,11 +1,13 @@
-module.exports = function (app) {
+module.exports = function(app){
 
-  const application = require('./routes/application');
-  const users = require('./routes/users');
-  const trips = require('./routes/product');
+  var index = require('./routes/index');
+  var user = require('./routes/user');
+  var payment = require('./routes/payment');
+  var product = require('./routes/product');
 
-  app.use('/products', application);
-  app.use('/users', users);
-  app.use('/trips', trips);
+  app.use('/', index);
+  app.use('/users', user);
+  app.use('/payment', payment);
+  app.use('/product', product);
   //other routes..
 }
