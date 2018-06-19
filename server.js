@@ -20,7 +20,7 @@ var expbhs = require("express-handlebars");
 app.engine("handlebars", expbhs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes and vie the server access to them
+// Import routes and via the server access to them
 require('./routes')(app);
 
 app.listen(PORT, function() {

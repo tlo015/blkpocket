@@ -3,7 +3,7 @@ var router = express.Router();
 
 var user_controller = require('../controllers/user_controller');
 
-router.get('/', user_controller.index);
+router.get('/signin', user_controller.signin);
 
 router.get('/account', user_controller.account);
 
