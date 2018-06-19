@@ -8,3 +8,4 @@ $(document).ready(function() {
     $("#hero-img").attr('src', clickSrc)
     });
 });
+

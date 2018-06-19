@@ -11,3 +11,4 @@ function openFeatures(evt, productFeature) {
     document.getElementById(productFeature).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
