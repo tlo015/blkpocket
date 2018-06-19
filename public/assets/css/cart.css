@@ -1,0 +1,25 @@
+.in-cart-img {
+    width: 100%;
+    height: auto;
+}
+
+.shopping-btn {
+    padding: 5px 10px;
+}
+
+.promo {
+    text-align: center;
+}
+
+#order-promocode {
+    display: inline;
+}
+
+#order-coupon{
+    display: inline;
+}
+
+.paypal-btn {
+    margin-top: 15px;
+    padding: 10px 5px;
+}

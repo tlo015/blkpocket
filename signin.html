@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SwurveeCurvee - Sign in/Sign Up</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/assets/css/signin.css">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <!-- BRAND LOGO -->
+    <header>
+
+        <!-- SHOPPING CART + LOGIN ID: BANNER-->
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right cart-dropdown" aria-labelledby="navbarDropdownMenuLink-InCart">
+                        <div class="container" id="in-cart"> 
+                            <div class="row">
+                                <p>IN CART ITEMS HERE</p>
+                            </div>
+                            <p>Total: </p>
+                            <button type="button" class="btn btn-secondary btn-sm">Checkout</button>     
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <img id="logo" src="public/assets/img/sample-logo.png">
+
+        <!-- HORIZONTAL NAVIGATION MENU FIXED ON PAGE  ID: MASTHEAD-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="masthead">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> New In </a>
+                        <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a class="dropdown-item" href="#">All New</a>
+                                        <a class="dropdown-item" href="#">New in Dresses</a>
+                                        <a class="dropdown-item" href="#">New In Tees</a>
+                                        <a class="dropdown-item" href="#">New In Athleisure</a>
+                                        <a class="dropdown-item" href="#">New Deals</a>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Dresses </a>
+                        <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a class="dropdown-item" href="#">Everyday Dresses</a>
+                                        <a class="dropdown-item" href="#">Mini Dresses</a>
+                                        <a class="dropdown-item" href="#">Midi Dresses</a>
+                                        <a class="dropdown-item" href="#">Maxi Dresses</a>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Denim </a>
+                        <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a class="dropdown-item" href="#">Skinny</a>
+                                        <a class="dropdown-item" href="#">Distressed</a>
+                                        <a class="dropdown-item" href="#">Fashion</a>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Tees </a>
+                        <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a class="dropdown-item" href="#">Long Sleeve</a>
+                                        <a class="dropdown-item" href="#">Short Sleeve</a>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Athleisure </a>
+                        <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a class="dropdown-item" href="#">Tops</a>
+                                        <a class="dropdown-item" href="#">Bottoms</a>
+                                        <a class="dropdown-item" href="#">Jackets</a>
+                                        <a class="dropdown-item" href="#">Sets</a>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <img class="masthead-img-new" src="public/assets/img/sample-img.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Deals </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <br>
+
+    <div class="container">
+        <h1>Sign In</h1>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" id="sign-in">
+                
+                <p>If you already have an account with us, please log in:</p>
+                <!-- email/password -->
+                <form>
+                    <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                <!-- <img id="sign-in-promo-img" src="public/assets/img/sample-img.png"> -->
+
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5" id="register">
+                <h5 class="title">Create an Account</h5>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" id="input-email" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="input-password" placeholder="Password">
+                </div>
+
+                <div class="login">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-modal">
+                        Continue
+                    </button>
+                </div>
+
+                <p class="or"> or </p>
+
+                <!-- Sign in with Google/Facebook -->
+                <div class="api-login"> 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#facebook-modal">
+                        <i class="fab fa-facebook"></i></i> Continue with Facebook
+                    </button>
+                </div>
+
+                <div class="api-login">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#google-modal">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </button>
+                </div>
+
+
+                <!-- FACEBOOK MODAL -->
+                <div class="modal fade" id="facebook-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">FACEBOOK</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                ...
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FACEBOOK MODAL -->
+                <div class="modal fade" id="google-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">GOOGLE</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                ...
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CREATE ACCOUNT -->
+                <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">CREATE ACCOUNT</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="first-name">First Name </label>
+                                        <input type="first" class="form-control" id="input-first-name" placeholder="Enter first name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name </label>
+                                        <input type="last" class="form-control" id="input-last-name" placeholder="Enter last name">
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="password-confirm">Confirm Password</label>
+                                        <input type="password-cfm" class="form-control" id="input-password-cfm" placeholder="Confirm password">
+                                    </div>
+                
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Send me emails about sales, events, new arrivals and more!</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">By continuing, you agree to Pinterest's Terms of Service, Privacy Policy</label>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agree wirh terms and conditions -->
+                <!-- Subscribe to newsletter -->
+                <!-- create account -->
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <!-- DESIGNED BY -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h7>ABOUT US</h7>
+                <p>About</p>
+                <p>Become and Affliliate</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>INFORMATION</h7>
+                <p>Delivery</p>
+                <p>Terms and Conditions</p>
+            </div>
+
+            <div class="col-md-4">
+                <h7>HELP</h7>
+                <p>Track My Order</p>
+                <p>Size Guide</p>
+            </div>
+        </div>
+        <p class="design">Copyright @2018 Designed by: </p>
+    </footer>
+    
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

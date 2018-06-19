@@ -1,0 +1,27 @@
+.main-img {
+    width: 100%;
+    height: auto;
+}
+.additional-img {
+    width: 75%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    margin-bottom: 30px;
+}
+
+.rec-img {
+    width: 100%;
+    height: auto;
+}
+
+.product-care {
+    height: 400px;
+}
+
+.product-name, .product-price{
+    text-align: center;
+    color: black;
+}

@@ -1,0 +1,178 @@
+<!-- NAVBAR -->
+<header>
+    
+    <!-- ID: MY-ACCOUNT -->
+    <!-- ID: SHOPPING CART -->
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="container">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" id="my-account" href="/signin/">My Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right cart-dropdown"  id="in-cart" aria-labelledby="navbarDropdownMenuLink-InCart">
+                    <div class="container"> 
+                        <h5 class="my-cart-masthead">My Shopping Bag</h5>
+                        <div class="row" id="in-cart-item-summary">
+                            <div class="col-md-4">
+                                <img class="in-cart-img" src="/assets/img/sample-img.png">
+                            </div>
+                            <div class="col-md-8">
+                                <p>Product Name</p>
+                                <p>$0.00</p>
+                                <p>
+                                    Size
+                                    <br>
+                                    Qty
+                                </p>
+                                
+                                <a class="in-cart-remove" href="">Remove</a>
+                            </div>
+                        </div>
+                        <div class="in-cart-subtotal">
+                            <p>Subtotal Total: </p>
+                            <a type="button" class="btn btn-secondary btn-block" href="/cart/">Checkout</a>  
+                        </div>   
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    
+    <!-- BRAND LOGO -->
+    <a href="/"><img id="logo" src="/assets/img/sample-logo.png"></a>
+
+    <!-- HORIZONTAL NAVIGATION MENU FIXED ON PAGE  ID: MASTHEAD-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="masthead">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> New In </a>
+                    <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2" id="categoryNewIn">
+                                    <a class="dropdown-item cat-new-in" href="/category/">All New</a>
+                                    <a class="dropdown-item" id="cat-new-in" href="/category/">New in Dresses</a>
+                                    <a class="dropdown-item cat-new-in" href="/category/">New In Tees</a>
+                                    <a class="dropdown-item cat-new-in" href="/category/">New In Athleisure</a>
+                                    <a class="dropdown-item cat-new-in" href="/category/">New Deals</a>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/category/"> Dresses </a>
+                    <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="/category/">All Dresses</a>
+                                    <a class="dropdown-item" href="/category/">Everyday Dresses</a>
+                                    <a class="dropdown-item" href="/category/">Mini Dresses</a>
+                                    <a class="dropdown-item" href="/category/">Midi Dresses</a>
+                                    <a class="dropdown-item" href="/category/">Maxi Dresses</a>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/category/"> Denim </a>
+                    <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="/category/">Skinny</a>
+                                    <a class="dropdown-item" href="/category/">Distressed</a>
+                                    <a class="dropdown-item" href="/category/">Fashion</a>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/category/"> Tees </a>
+                    <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="/category/">Long Sleeve</a>
+                                    <a class="dropdown-item" href="/category/">Short Sleeve</a>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/category/"> Athleisure </a>
+                    <div class="dropdown-menu masthead-dropdown" aria-labelledby="navbarDropdownMenuLink-NewIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="/category/">Tops</a>
+                                    <a class="dropdown-item" href="/category/">Bottoms</a>
+                                    <a class="dropdown-item" href="/category/">Jackets</a>
+                                    <a class="dropdown-item" href="/category/">Sets</a>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="/assets/img/sample-img.png">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <img class="masthead-img-new" src="assets/img/sample-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-haspopup="true" aria-expanded="false" href="/category/"> Deals </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+</header>

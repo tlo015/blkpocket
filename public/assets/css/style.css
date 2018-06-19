@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 250px;
+}
+
+button {
+    outline-style: none;
+}
+
+/* NAVIGATION */
+/* SHOPPING CART + LOGIN BANNER */
+.my-cart-masthead{
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    padding: 10px 10px 20px 10px;
+}
+
+#in-cart{
+    width: 35%;
+}
+
+#in-cart-item-summary {
+    margin: 10px 0px;
+}
+
+.in-cart-subtotal {
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    border-top-width: 2px;
+    padding: 20px 10px 10px 10px;
+}
+
+.in-cart-img {
+    width: 100%;
+    height: auto;
+}
+
+/* COMPANY NAME LOGO */
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAV */
+#navbarNav ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbarNav ul li{
+    padding: 0 20px;
+}
+
+.masthead-dropdown {
+    width: 100%;
+    border-style: none;
+}
+
+/* MODAL */
+/* DUMMY MODAL BUTTON */
+#modal-ctn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#modal-pic {
+    width: 100%;
+    height: auto;
+}
+
+/* SHOP THE TREND */
+#trend-ctn {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#trend-pic {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.shop-trend {
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.favorites, .insta, .recommended{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title:before, .title:after {
+    content: '';
+    width: 150px;
+    height: 2px;
+    margin: 0px 10px;
+    background: lightgray;
+}
+
+.fav-pic1, .fav-pic2, .fav-pic3, .fav-pic4 {
+    width: 100%;
+    height: auto;
+}
+
+/* HERO */
+#hero-ctn {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    text-align: center;
+}
+
+#hero-pic {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.shop-hero {
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SHOP */
+#shop-ctn {
+    border-left-width: -15px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* SHOP LEFT SIDE - MAIN */
+#shop-main-ctn {
+    width: 100%;
+    height: 400px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    text-align: center;
+}
+
+#shop-pic1 {
+    width: 100%;
+    height: 100%;
+}
+
+.shop-main-shop {
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SHOP RIGHT SIDE - HALF */
+.shop-half {
+    width: 100%;
+    height: 400px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: absolute;
+    right: 0px;
+}
+
+.shop-half-top{
+    width: 100%;
+    height: 46%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+}
+
+.shop-half-bottom{
+    width: 100%;
+    height: 46%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+#shop-pic2 {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+#shop-pic3 {
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+}
+
+.shop-half-shop {
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* INSTAGRAM */
+.insta{
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 175px;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    border-top-width: 2px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.copyright {
+    text-align: center;
+}
