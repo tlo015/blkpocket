@@ -1,24 +1,51 @@
-// Import the ORM to create functions that will interact with the database.
-var Orm = require("../config/orm.js");
+'use strict';
 
-var product = {
-  all: function(cb) {
-    Orm.all("products", function(res) {
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    Orm.create("products", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    Orm.update("products", objColVals, condition, function(res) {
-      cb(res);
+module.exports = function (sequelize, DataTypes) {
+  const Product = sequelize.define('Product', {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    sku: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    // The password cannot be null
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    regular_price: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    taxable: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
+    }
+  });
+  Product.associate = function (models) {
+    // associations can be defined here
+    Product.belongsTo(models.ProductStatuses, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   }
-};
-
-// Export the database functions for the controller (main_controller.js).
-module.exports = product;
+  return Product;
+}

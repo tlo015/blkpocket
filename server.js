@@ -21,19 +21,7 @@ app.engine("handlebars", expbhs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and vie the server access to them
-var index = require("./routes/index");
-var category = require("./routes/category");
-var products = require("./routes/products");
-var cart = require("./routes/cart");
-//var signIn = require("./routes/signin");
-var myaccount = require("./routes/myaccount");
-
-app.use("/", index);
-app.use("/category", category);
-app.use("/products", products);
-app.use("/cart", cart);
-//app.use("/signin", signIn);
-app.use("/myaccount", myaccount);
+require('./routes')(app);
 
 app.listen(PORT, function() {
 	console.log("App listening at localhost:" + PORT);
