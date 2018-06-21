@@ -1,20 +1,20 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-  const ProductStatuses = sequelize.define('ProductStatuses', {
+  const Categories = sequelize.define('Categories', {
     name: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+    category: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
     },
-    status: {
-      type: DataTypes.STRING,
+    product_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [1]
@@ -27,5 +27,5 @@ module.exports = function (sequelize, DataTypes) {
       onDelete: "cascade"
     });
   }
-  return ProductStatuses;
+  return Categories;
 }
