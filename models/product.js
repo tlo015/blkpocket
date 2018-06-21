@@ -2,10 +2,6 @@
 
 module.exports = function (sequelize, DataTypes) {
   const Product = sequelize.define('Product', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     sku: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,20 +19,40 @@ module.exports = function (sequelize, DataTypes) {
     // The password cannot be null
     description: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     regular_price: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     taxable: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: true
+      defaultValue: true,
+      validate: {
+        len: [1]
+      }
+    },
+    image_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: true,
+      validate: {
+        len: [1]
+      }
     }
   });
   Product.associate = function (models) {

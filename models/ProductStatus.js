@@ -1,11 +1,7 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-  const ProductStatuses = sequelize.define('ProductStatuses', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
+  const ProductStatus = sequelize.define('ProductStatus', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,11 +17,11 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  User.associate = function (models) {
+  ProductStatus.associate = function (models) {
     // associations can be defined here
-    User.hasMany(models.product, {
+    ProductStatus.hasMany(models.Product, {
       onDelete: "cascade"
     });
   }
-  return ProductStatuses;
+  return ProductStatus;
 }

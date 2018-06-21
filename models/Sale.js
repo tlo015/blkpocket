@@ -1,20 +1,13 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-  const Sales = sequelize.define('Sales', {
+  const Sale = sequelize.define('Sale', {
     name: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
     order_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.NOW,
       allowNull: false,
       validate: {
         len: [1]
@@ -28,9 +21,9 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  User.associate = function (models) {
+  Sale.associate = function (models) {
     // associations can be defined here
-    User.belongsTo(sales.product, {
+    Sale.belongsTo(models.User, {
       onDelete: "cascade"
     });
   }
