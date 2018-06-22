@@ -2,13 +2,6 @@
 
 module.exports = function (sequelize, DataTypes) {
   const ProductStatus = sequelize.define('ProductStatus', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     status: {
       type: DataTypes.STRING,
       allowNull: false,

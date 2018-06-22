@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    name: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -57,7 +57,7 @@ module.exports = function (sequelize, DataTypes) {
   });
   Product.associate = function (models) {
     // associations can be defined here
-    Product.belongsTo(models.ProductStatuses, {
+    Product.belongsTo(models.ProductStatus, {
       foreignKey: {
         allowNull: false
       }

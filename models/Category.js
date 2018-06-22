@@ -2,7 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
   const Category = sequelize.define('Category', {
-    category: {
+    category_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -10,9 +10,10 @@ module.exports = function (sequelize, DataTypes) {
         }
     },
   });
+
   Category.associate = function (models) {
     // associations can be defined here
-    Category.belongsTo(models.ProductCategory, {
+    Category.belongsTo(models.Product, {
       onDelete: "cascade"
     });
   }

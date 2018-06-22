@@ -3,7 +3,7 @@
 module.exports = function (sequelize, DataTypes) {
   const CcTransaction = sequelize.define('CcTransaction', {
     transaction_date: {
-      type: DataTypes.NOW,
+      type: DataTypes.DATE,
       allowNull: false,
       validate: {
         len: [1]
@@ -54,7 +54,7 @@ module.exports = function (sequelize, DataTypes) {
   });
   CcTransaction.associate = function (models) {
     // associations can be defined here
-    CcTransaction.belongsTo(model.Sale, {
+    CcTransaction.belongsTo(models.Sale, {
       onDelete: "cascade"
     });
   }

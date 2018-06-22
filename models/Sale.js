@@ -2,12 +2,8 @@
 
 module.exports = function (sequelize, DataTypes) {
   const Sale = sequelize.define('Sale', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     order_date: {
-      type: DataTypes.NOW,
+      type: DataTypes.DATE,
       allowNull: false,
       validate: {
         len: [1]
@@ -27,5 +23,5 @@ module.exports = function (sequelize, DataTypes) {
       onDelete: "cascade"
     });
   }
-  return Sales;
+  return Sale;
 }

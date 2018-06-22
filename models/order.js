@@ -2,10 +2,6 @@
 
 module.exports = function (sequelize, DataTypes) {
   const Order = sequelize.define('Order', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     order_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -20,8 +16,8 @@ module.exports = function (sequelize, DataTypes) {
           len: [1]
         }
       },
-    name: {
-      type: DataTypes.VARCHAR,
+    product_name: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -56,9 +52,9 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
   });
-  User.associate = function (models) {
+  Order.associate = function (models) {
     // associations can be defined here
-    Order.hasMany(sales.product, {
+    Order.belongsTo(models.Sale, {
       onDelete: "cascade"
     });
   }

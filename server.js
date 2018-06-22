@@ -1,5 +1,9 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+var express = require('express');
+var path = require('path');
+var logger = require('morgan');
+var bodyParser = require('body-parser');
+var session = require('express-session'); 
+// var passport = require("./config/passport");
 var db = require("./models");
 
 var app = express();
@@ -14,6 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
 
 // Set Handlebars
 var expbhs = require("express-handlebars");
