@@ -7,4 +7,6 @@ router.get('/signin', user_controller.signin);
 
 router.get('/account', user_controller.account);
 
+router.get('/admin', user_controller.admin);
+
 module.exports = router;

@@ -1,27 +1,23 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-  const CcTransactions = sequelize.define('CcTransactions', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    order_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
+  const CcTransaction = sequelize.define('CcTransaction', {
+    transaction_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     processor: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
     processor_trans_id: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -42,7 +38,7 @@ module.exports = function (sequelize, DataTypes) {
         }
     },
     cc_type: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
@@ -56,11 +52,11 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
   });
-  User.associate = function (models) {
+  CcTransaction.associate = function (models) {
     // associations can be defined here
-    CcTransactions.belongsTo(sales.product, {
+    CcTransaction.belongsTo(models.Sale, {
       onDelete: "cascade"
     });
   }
-  return Order;
+  return CcTransaction;
 }
