@@ -11,20 +11,20 @@
             <br>
 
         <div class="row">
-            {{#if product}}
-            {{#each product}}
+            {{!-- {{#if product}}
+            {{#each product}} --}}
             
             <div class="col-md-3">
                 <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
                 <a href="/product/product">
-                    <img class="preview-img" id="preview-img1-1" src="{{this.dataValues.image_url}}">
+                    <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
                     <p class="product-name"> {{ this.dataValues.product_name }} </p>
                 </a>
                     <p class="product-price"> ${{ this.dataValues.regular_price }}</p>
             </div>
 
-            {{/each}}
-            {{/if}}
+            {{!-- {{/each}}
+            {{/if}} --}}
         </div>
 
     </div>
