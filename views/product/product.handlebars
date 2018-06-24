@@ -33,16 +33,27 @@
                     <h5>Product Name</h5>
                     <p>SKU:</p>
                     <p>$0.00</p>
-                    <p>Quantity:</p>
+                    <label>Quantity:</label>
                     <form>
                         <div class="form-group">
-                            <input type="quantity" class="quantity" id="input-quantity" value="1">
+                            <input type="quantity" class="quantity" id="quantity" value="1">
                         </div>
                     </form>
 
-                    <button type="button" class="btn add-to-cart">Add to Cart</button>
-                    <button type="button" class="btn add-to-favs">Add to Favorites</button>
+                    <button type="button" class="add-item add-to-cart">Add to Cart</button>
+                    <button type="button" class="snipcart-checkout">View Cart</button>
+                    <button type="button" class="button add-to-favs">Add to Favorites</button>
+
+                    <button type="button"
+                    class="snipcart-add-item"
+                    style="display:none"
+                    data-item-name="Test"
+                    data-item-price="9.99"
+                    data-item-id="1234"
+                    data-item-url="/add-items-with-api"></button>
+                
                 </div>
+
 
                 <hr>
 
@@ -126,6 +137,6 @@
     </div>
     <!-- RECENTLY VIEWED -->
 
-
 {{> footer}}
+
 
