@@ -8,7 +8,8 @@ var db = require("./models");
 
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+// var PORT = process.env.PORT || 3000;
+app.set('port', process.env.PORT || 3000);
 
 // Serve static content for the app from "public"
 app.use(express.static("public"));
@@ -31,7 +32,7 @@ app.set("view engine", "handlebars");
 // Import routes and via the server access to them
 require('./routes')(app);
 
-db.sequelize.sync({force: true}).then(function () {
+db.sequelize.sync().then(function () {
 	// set our app to listen to the port we set above
   var server = app.listen(app.get('port'), function() {
   	// then save a log of the listening to our debugger.

@@ -16,7 +16,6 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    // The password cannot be null
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
@@ -55,13 +54,13 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  Product.associate = function (models) {
-    // associations can be defined here
-    Product.belongsTo(models.ProductStatus, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  }
+  // Product.associate = function (models) {
+  //   // associations can be defined here
+  //   Product.belongsTo(models.ProductStatus, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // }
   return Product;
 }
