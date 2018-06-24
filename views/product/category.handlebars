@@ -6,95 +6,27 @@
     
     <!-- CATEGORY LIST -->
     <div class="container" id="category">
-        {{!-- <div class="row">  --}}
-            {{!-- <div class="col-md-2" id="ctg-side-bar"> --}}
+        <img id="category-pic" src="/assets/img/sample-img.png">
 
-                {{!-- Where the partial will go --}}
-                {{!-- {{> (whichPartial) }} --}}
+            <br>
 
-            {{!-- </div> --}}
-            {{!-- <div class="col-md-10"> --}}
-                <img id="category-pic" src="/assets/img/sample-img.png">
+        <div class="row">
+            {{#if product}}
+            {{#each product}}
+            
+            <div class="col-md-3">
+                <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
+                <a href="/product/product">
+                    <img class="preview-img" id="preview-img1-1" src="{{this.dataValues.image_url}}">
+                    <p class="product-name"> {{ this.dataValues.product_name }} </p>
+                </a>
+                    <p class="product-price"> ${{ this.dataValues.regular_price }}</p>
+            </div>
 
-                <br>
+            {{/each}}
+            {{/if}}
+        </div>
 
-                <div class="row">
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-        
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-        
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-        
-                    <div class="col-md-3">
-                        <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
-                        <a href="/product/product">
-                            <img class="preview-img" id="preview-img1-1" src="/assets/img/sample-img.png">
-                            <p class="category-name">ITEM NAME</p>
-                        </a>
-                            <p class="category-price">$0.00</p>
-                    </div>
-                </div>
-            {{!-- </div> --}}
-        {{!-- </div>  --}}
     </div>
 
 {{> footer}}

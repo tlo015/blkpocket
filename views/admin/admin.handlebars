@@ -11,7 +11,8 @@
 					<div class="card">
 
 						<div class="card-body">
-							<form action="" method="POST" role="form">
+							{{!-- <form action="" method="POST" role="form" id="productForm"> --}}
+							<form id="productForm">
 								<div class="form-group">
 									<label for="">Category</label>
 									<input type="text" class="form-control" id="category_name" placeholder="">
@@ -26,7 +27,7 @@
 								</div>
 								<div class="form-group">
 									<label for="">Description</label>
-									<input type="number" class="form-control" id="description" placeholder="">
+									<input type="text" class="form-control" id="description" placeholder="">
 								</div>
                                 <div class="form-group">
 									<label for="">Regular Price</label>
@@ -36,18 +37,14 @@
 									<label for="">Quantity</label>
 									<input type="number" class="form-control" id="quantity" placeholder="">
 								</div>
-                                <div class="form-group">
-									<label for="">Taxes</label>
-									<input type="number" class="form-control" id="taxable" placeholder="">
-								</div>
-                                <div class="form-group">
+                                {{!-- <div class="form-group">
                                     <label for="" class="control-label">Image</label>
-                                    <input class="form-control" type="file" name="uploaded_image" accept=""/>
-                                </div>
+                                    <input class="form-control" type="file" id="image_url" name="uploaded_image" accept=""/>
+                                </div> --}}
 							</form>
 							<br>
 							<div class="text-right">
-								<button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-book"></span> Add projects</button>
+								<button type="submit" class="btn btn-primary btn-md" id="addProductButton">Add Product</button>
 							</div>
 						</div>
 
