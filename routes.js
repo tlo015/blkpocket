@@ -4,19 +4,18 @@ module.exports = function(app) {
     const cart = require('./routes/cart');
     const category = require('./routes/category');
     const products = require('./routes/products');
-    const users = require('./routes/users');
     const myaccount = require('./routes/myaccount');
     const shopping_cart = require('./routes/shopping_cart');
-    const about = require('/routes/about');
-    const signup = require('routes/users');
+    // const about = require('/routes/about');
+    const signup = require('./routes/users');
     
 
     app.use('/', index);
-    app.use('/signup', signin);
+    app.use('/signup', signup);
     app.use('/myaccount', myaccount);
     app.use('/category', category);
     app.use('/products', products);
-    app.use('/shopping_cart', shopping_cart);
+    // app.use('/shopping_cart', shopping_cart);
     
     
     

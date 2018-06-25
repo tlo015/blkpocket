@@ -1,7 +1,15 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+const express        = require('express');
+const path           = require('path');
+const logger         = require('morgan');
+const bodyParser     = require('body-parser');
+const session        = require('express-session'); 
+const passport 		 = require("./config/passport");
+const config		 = require("./config/extra-config");
+
 
 var app = express();
+
+app.set('views', path.join(__dirname, 'views'));
 
 var PORT = process.env.PORT || 8080;
 
@@ -20,21 +28,48 @@ var expbhs = require("express-handlebars");
 app.engine("handlebars", expbhs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+const isAuth  = require("./config/middleware/isAuthenticated");
+const authCheck  = require('./config/middleware/attachAuthenticationStatus');
+
+app.use(logger('dev'));
+app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(authCheck);
+
 // Import routes and vie the server access to them
-var index = require("./routes/index");
-var category = require("./routes/category");
-var products = require("./routes/products");
-var cart = require("./routes/cart");
-var signin = require("./routes/users");
-var myaccount = require("./routes/myaccount");
+// var index = require("./routes/index");
+// var category = require("./routes/category");
+// var products = require("./routes/products");
+// var cart = require("./routes/cart");
+// var users = require("./routes/users");
+// var myaccount = require("./routes/myaccount");
 
-app.use("/", index);
-app.use("/category", category);
-app.use("/products", products);
-app.use("/cart", cart);
-app.use("/signin", signin);
-app.use("/myaccount", myaccount);
+// app.use("/", index);
+// app.use("/category", category);
+// app.use("/products", products);
+// app.use("/cart", cart);
+// app.use("/users", users);
+// app.use("/myaccount", myaccount);
 
-app.listen(PORT, function() {
-	console.log("App listening at localhost:" + PORT);
-});
+require('./routes')(app);
+
+
+// app.listen(PORT, function() {
+// 	console.log("App listening at localhost:" + PORT);
+// });
+
+app.use(function(req, res, next) {
+	const err = new Error('Not Found');
+	err.status = 404;
+	next(err);
+  });
+  app.use(function(err, req, res, next) {
+	res.status(err.status || 500);
+	res.render('error', {
+	  message: err.message,
+	  error: (app.get('env') === 'development') ? err : {}
+	})
+  });
+
+  module.exports = app;
