@@ -25,14 +25,14 @@ var index = require("./routes/index");
 var category = require("./routes/category");
 var products = require("./routes/products");
 var cart = require("./routes/cart");
-//var signIn = require("./routes/signin");
+var signin = require("./routes/users");
 var myaccount = require("./routes/myaccount");
 
 app.use("/", index);
 app.use("/category", category);
 app.use("/products", products);
 app.use("/cart", cart);
-//app.use("/signin", signIn);
+app.use("/signin", signin);
 app.use("/myaccount", myaccount);
 
 app.listen(PORT, function() {

@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/brandonao/SwurveeCurvee/issues"
   },
-  "homepage": "https://github.com/brandonao/SwurveeCurvee#readme"
+  "homepage": "https://github.com/brandonao/SwurveeCurvee#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.17.5"
+  }
 }

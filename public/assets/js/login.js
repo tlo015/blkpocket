@@ -43,6 +43,6 @@ $(document).ready(function() {
         $("#password-feedback").text("Incorrect Username or Password");
       });
     }
-  
   });
+
   
