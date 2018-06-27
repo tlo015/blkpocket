@@ -1,28 +1,38 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var sequelize = require("sequelize");
 
-var app = express();
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
 
+// Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
+var db = require("./models/users");
 
-// Serve static content for the app from "public"
-app.use(express.static("public"));
-
-// Parse application/x-222-form-urlencoded
+// Creating express app and configuring middleware needed for authentication
+var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
 app.use(bodyParser.json());
+app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Set Handlebars
-var expbhs = require("express-handlebars");
+// Requiring our routes
+require("./routes");
 
-app.engine("handlebars", expbhs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-// Import routes and via the server access to them
-require('./routes')(app);
-
-app.listen(PORT, function() {
-	console.log("App listening at localhost:" + PORT);
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
 });
+
+
+// db.sequelize.sync().then(function() {
+// 	app.listen(PORT, function() {
+// 	  console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+// 	});
+//   });

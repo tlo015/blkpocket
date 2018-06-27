@@ -5,6 +5,7 @@ module.exports = function(app){
   var payment = require('./routes/payment');
   var product = require('./routes/product');
 
+
   app.use('/', index);
   app.use('/users', user);
   app.use('/payment', payment);

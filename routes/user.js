@@ -5,6 +5,6 @@ var user_controller = require('../controllers/user_controller');
 
 router.get('/signin', user_controller.signin);
 
-router.get('/account', user_controller.account);
+router.get('/signup', user_controller.signup);
 
 module.exports = router;

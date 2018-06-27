@@ -1,7 +1,9 @@
 exports.signin = function (req, res) {
-  res.render("user/signin");
+  res.render("partials/login-modal");
 };
 
-exports.account = function (req, res) {
-  res.render("user/account");
+exports.signup = function (req, res) {
+  res.render("users/registration", {
+    layout: 'main-registration'
+  });
 };

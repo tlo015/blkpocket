@@ -1,0 +1,17 @@
+body {
+	color: black;
+}
+
+/* #registration-container { */
+	.col-centered{
+		float: none;
+		margin: 0 auto;
+	}
+	
+
+
+@media (min-width: 768px) {
+  #registration-container {
+		margin-top: 10%;
+	}
+}
