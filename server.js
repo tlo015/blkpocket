@@ -1,38 +1,68 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var sequelize = require("sequelize");
+const express        = require('express');
+const path           = require('path');
+const logger         = require('morgan');
+const bodyParser     = require('body-parser');
+const session        = require('express-session'); 
+const passport 			 = require("./config/passport");
+const config				 = require("./config/extra-config");
 
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+var db = require("./models");
+// Express settings
+// ================
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models/users");
+// instantiate our app
+const app            = express();
 
-// Creating express app and configuring middleware needed for authentication
-var app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
+//allow sessions
+// app.use(session({ secret: 'booty Mctootie', cookie: { maxAge: 60000 }}));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+
+//set up handlebars
+const exphbs = require('express-handlebars');
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+
+const isAuth 				 = require("./config/middleware/isAuthenticated");
+// const authCheck 		 = require('./config/middleware/attachAuthenticationStatus');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+// app.use(authCheck);
 
-// Requiring our routes
-require("./routes");
+app.set('port', process.env.PORT || 8080);
+require('./routes')(app);
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+// catch 404 and forward to error handler
+// app.use(function(req, res, next) {
+//   const err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
+
+// // error handler
+// // no stacktraces leaked to user unless in development environment
+// app.use(function(err, req, res, next) {
+//   res.status(err.status || 500);
+//   res.render('error', {
+//     message: err.message,
+//     error: (app.get('env') === 'development') ? err : {}
+//   })
+// });
+db.sequelize.sync().then(function () {
+	// set our app to listen to the port we set above
+  var server = app.listen(app.get('port'), function() {
+  	// then save a log of the listening to our debugger.
   });
 });
-
-
-// db.sequelize.sync().then(function() {
-// 	app.listen(PORT, function() {
-// 	  console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-// 	});
-//   });

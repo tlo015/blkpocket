@@ -21,11 +21,11 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  User.associate = function (models) {
-    // associations can be defined here
-    User.hasMany(models.product, {
-      onDelete: "cascade"
-    });
-  }
-  return Categories;
+  // User.associate = function (models) {
+  //   // associations can be defined here
+  //   User.hasMany(models.product, {
+  //     onDelete: "cascade"
+  //   });
+  // }
+  // return Categories;
 }
