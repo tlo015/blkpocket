@@ -13,9 +13,10 @@ module.exports = function (sequelize, DataTypes) {
 
   Category.associate = function (models) {
     // associations can be defined here
-    Category.belongsTo(models.Product, {
+    Category.hasMany(models.Product, {
       onDelete: "cascade"
     });
-  }
+  };
+
   return Category;
-}
+};

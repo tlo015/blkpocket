@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $(".additional-img").on("click", function() {
     var clickId = $(this).attr('id');
     var clickSrc = $(this).attr('src')
@@ -7,5 +8,7 @@ $(document).ready(function() {
 
     $("#hero-img").attr('src', clickSrc)
     });
+
+
 });
 

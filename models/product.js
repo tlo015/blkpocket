@@ -54,13 +54,14 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  // Product.associate = function (models) {
-  //   // associations can be defined here
-  //   Product.belongsTo(models.ProductStatus, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // }
+  Product.associate = function (models) {
+    // associations can be defined here
+    Product.belongsTo(models.Category, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Product;
-}
+};
