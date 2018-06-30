@@ -6,15 +6,9 @@
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="container">
         <ul class="navbar-nav ml-auto">
-             {{#if isAuthenticated}}
-                    <li class="nav-item">
-                        <a class="nav-link" id="my-account"  href="/users/sign-out">Logout</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" id="my-account" data-toggle="modal" data-target="#login-modal">Login/Sign</a>
-                    </li>
-                {{/if}}
+            <li class="nav-item">
+                <a class="nav-link" id="my-account" data-toggle="modal" data-target="#login-modal">Login/Sign</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" id="shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="fas fa-shopping-cart"></i>
