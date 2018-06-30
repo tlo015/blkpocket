@@ -30,7 +30,8 @@ function insertProduct (event) {
         !newDescription.val().trim() || 
         !newStones.val().trim() ||
         !newPrice.val().trim() || 
-        !newQuantity.val().trim()
+        !newQuantity.val().trim() ||
+        !newImage.val().trim()
     ) {
         return;
     }
@@ -43,7 +44,7 @@ function insertProduct (event) {
         stones: newStones.val().trim(),
         regular_price: newPrice.val().trim(),
         quantity: newQuantity.val().trim(),
-        //image_url: newImage
+        image_url: newImage.val().trim()
     };
 
     submitNewProduct(newProduct);

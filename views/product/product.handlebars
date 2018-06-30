@@ -8,15 +8,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <img class="main-img" id="hero-img" src="/assets/img/dummy1.jpeg">
+                <img class="main-img" id="hero-img" src="{{ type.dataValues.image_url }}">
             </div>
 
             <!-- ADDITIONAL PRODUCT IMG -->
             <div class="col-md-2">
-                <img class="additional-img" id="add-img1" src="/assets/img/dummy1.jpeg">
+                {{!-- <img class="additional-img" id="add-img1" src="/assets/img/dummy1.jpeg">
                 <img class="additional-img" id="add-img2" src="/assets/img/dummy2.jpeg">
                 <img class="additional-img" id="add-img3" src="/assets/img/dummy3.jpeg">
-                <img class="additional-img" id="add-img4" src="/assets/img/dummy4.jpeg">
+                <img class="additional-img" id="add-img4" src="/assets/img/dummy4.jpeg"> --}}
             </div>
 
             <!-- ABOUT THE PRODUCT -->
@@ -41,7 +41,7 @@
                     </form>
 
                     <button type="button" class="add-item add-to-cart">Add to Cart</button>
-                    <button type="button" class="snipcart-checkout">View Cart</button>
+                    {{!-- <button type="button" class="snipcart-checkout">View Cart</button> --}}
 
                     <button type="button"
                     class="snipcart-add-item"
@@ -62,11 +62,11 @@
                 <div class="product-care">
                     <ul class="nav nav-tabs" id="detail-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="home" aria-selected="true">Features</a>
+                            <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="home" aria-selected="true">Metal</a>
                         </li>
-                        {{!-- <li class="nav-item">
-                            <a class="nav-link" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="profile" aria-selected="false">Size and Fit</a>
-                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="profile" aria-selected="false">Stones</a>
+                        </li>
                     </ul>
 
                     <div class="tab-content" id="detail-content">
@@ -75,11 +75,7 @@
                         </div>
                         
                         <div class="tab-pane fade" id="size" role="tabpanel" aria-labelledby="profile-tab">
-                                <li>Size small measures approximately 35” from shoulder to hemline</li>
-                                <li>Mid-weight, stretch fabric</li>
-                                <li>Below-the-knee hemline</li>
-                                <li>True to fit</li>
-                                <li>Model is approximately 5'9” (175” cm) and is wearing a Size 2</li>    
+                            {{type.dataValues.stones}}
                         </div>
                     </div> 
                 </div>
