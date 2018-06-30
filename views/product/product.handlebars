@@ -7,8 +7,10 @@
     <!-- PRODUCT IMG -->
     <div class="container">
         <div class="row">
+            {{!-- {{#if product}}
+            {{#each product}}  --}}
             <div class="col-md-5">
-                <img class="main-img" id="hero-img" src="{{ type.dataValues.image_url }}">
+                <img class="main-img" id="hero-img" src="http://res.cloudinary.com/blkpocket/image/upload/v1530336352/blkpocket%20products/IMG_0170.jpg">
             </div>
 
             <!-- ADDITIONAL PRODUCT IMG -->
@@ -30,9 +32,9 @@
             <!-- ADD TO FAVORITES -->
             <div class="col-md-5">
                 <div class="product-info">
-                    <h5 class="product-name">Product Name: {{this.dataValues.product_name}} </h5>
-                    <p class="sku">SKU: {{this.dataValues.sku}} </p>
-                    <p class="price">$ {{this.datatValues.regular_price}}</p>
+                    <h5 class="">The Cloud </h5>
+                    <p class="sku">SKU: 10001MS </p>
+                    <p class="price">$ 475.00</p>
                     <p class="user_quantity">Quantity:</p>
                     <form>
                         <div class="form-group">
@@ -46,8 +48,8 @@
                     <button type="button"
                     class="snipcart-add-item"
                     style="display:none"
-                    data-item-name="Test"
-                    data-item-price="9.99"
+                    data-item-name="The Cloud"
+                    data-item-price="475"
                     data-item-id="1234"
                     data-item-url="/add-items-with-api"></button>
                 
@@ -71,22 +73,24 @@
 
                     <div class="tab-content" id="detail-content">
                         <div class="tab-pane fade show active" id="features" role="tabpanel" aria-labelledby="home-tab">
-                            {{type.dataValues.description}}
+                            <p>14k Yellow Gold</p>
                         </div>
                         
                         <div class="tab-pane fade" id="size" role="tabpanel" aria-labelledby="profile-tab">
-                            {{type.dataValues.stones}}
+                            <p>Moonstone</p>
                         </div>
                     </div> 
                 </div>
             </div>
+            {{!-- {{/each}}
+            {{/if}}  --}}
         </div>
     </div>
 
     <br>
 
     <!-- WHAT WE THINK YOU WILL LIKE -->
-    <div class="container">
+    {{!-- <div class="container">
         <h1 class="recommended title">RECOMMENDED FOR YOU</h1>
         <div class="row">
                 <div class="col-md-3">
@@ -122,7 +126,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- RECENTLY VIEWED -->
 
 {{> footer}}

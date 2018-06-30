@@ -57,16 +57,21 @@ exports.earring = function (req, res) {
   });
 };
 
+//find one product
 exports.product = function(req, res) {
   console.log("Products was hit")
   db.Product.findOne({
     where: {
-      id: req.body.id
+      id: 1
     }
-  }).then (function(dbProduct) {
+  // }).then (function(dbPro) {
+  //     res.json(dbPro);
+  //   });
+
+  }).then (function(singleProduct) {
     console.log (req.params.id)
     res.render("product/product", {
-      product: dbProduct
+      product: singleProduct
     });
   });
 };

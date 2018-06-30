@@ -13,6 +13,8 @@ router.get('/earring', product_controller.earring);
 
 router.get('/product', product_controller.product);
 
+//<a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a>
+
 
 
 

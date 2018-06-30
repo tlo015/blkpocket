@@ -9,7 +9,11 @@
 
     <!-- SHOP THE TREND -->
     <div class="container" id="trend-ctn">
-        <img id="trend-pic" src="/assets/img/homebanner.jpg">
+
+        <img id="trend-pic" src="/assets/img/favoritecollection.png">
+
+       
+
         <div class="shop-trend">
             {{!-- <p>SHOP THE TREND</p>
             <button type="button" class="btn btn-secondary" id="trend-btn">Shop</button> --}}
@@ -21,14 +25,14 @@
 
     <!-- FAVOURITES -->
     <!-- 4 IMAGES WITH BUTTON LINKING DIRECTLY TO THAT ITEM -->
-    <h1 class="favorites title">FAVORITES</h1>
+    {{!-- <h1 class="favorites title">FAVORITES</h1>
     
     <div class="container" id="fav">
         <div class="row">
             <div class="col-md-3">
-                <img class="fav-pic1" src="/assets/img/sample-img.png">
+                <img class="fav-pic1" src="{{this.dataValues.image_url}}">
             </div>
-            <div class="col-md-3 fav-pic">
+            {{!-- <div class="col-md-3 fav-pic">
                 <img class="fav-pic2" src="/assets/img/sample-img.png">
             </div>
             <div class="col-md-3 fav-pic">
@@ -36,7 +40,7 @@
             </div>
             <div class="col-md-3 fav-pic">
                 <img class="fav-pic4" src="/assets/img/sample-img.png">
-            </div>
+            </div> --}}
         </div>
     </div>
 
@@ -62,16 +66,26 @@
     <div class="container" id="shop-ctn">
         <div class="row" id="shop-main-ctn">
             <div class="col-md-6 shop-main">
-                <img id="shop-pic1" src="/assets/img/homesidebar.jpg">
+                <a href="/product/ring/">
+                    <img id="shop-pic1" src="/assets/img/ringsbanner.png">
+                </a>
+                
+
+                
+
                 {{!-- <div class="shop-main-shop">
-                    <p>SHOP RINGS</p>
-                    <button type="button" class="btn btn-secondary" id="trend-btn">Shop</button>
+                    <a href="/product/ring/" type="button" class="btn btn-dark" id="trend-btn">Shop</a   >
                 </div> --}}
             </div>
 
             <div class="col-md-6 shop-half">
                 <div class="row shop-half-top">
-                    <img id="shop-pic2" src="/assets/img/rightbanner1.jpg">
+                    <a href="/product/necklace">
+                        <img id="shop-pic2" src="/assets/img/necklacesbanner.png">
+                    </a>
+                    
+                    
+
                     {{!-- <div class="shop-half-shop">
                         <p>SHOP NECKLACES</p>
                         <button type="button" class="btn btn-secondary" id="trend-btn">Shop</button>
@@ -79,7 +93,7 @@
                 </div>  
 
                 <div class="row shop-half-bottom">                   
-                    <img id="shop-pic3" src="/assets/img/sample-img.png">
+                    <img id="shop-pic3" src="/assets/img/earringsbanner.png">
                     {{!-- <div class="shop-half-shop">
                         <p>SHOP TEES</p>
                         <button type="button" class="btn btn-secondary" id="trend-btn">Shop</button>
@@ -100,29 +114,5 @@
     </div>
     
     <!-- FOOTER -->
-    <!-- DESIGNED BY -->
-    <footer class="container-fluid">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h7>ABOUT US</h7>
-                <p>About</p>
-                <p>Become and Affliliate</p>
-            </div>
-
-            <div class="col-md-4">
-                <h7>INFORMATION</h7>
-                <p>Delivery</p>
-                <p>Terms and Conditions</p>
-            </div>
-
-            <div class="col-md-4">
-                <h7>HELP</h7>
-                <p>Track My Order</p>
-                <p>Size Guide</p>
-            </div>
-        </div>
-        </div>
-        <p class="copyright">Copyright @2018 Designed by: </p>
-    </footer>
+{{> footer}}
 
