@@ -132,6 +132,24 @@ button {
     height: auto;
 }
 
+/* MODAL */
+.modal{
+    display: block;
+    padding: 0px!;
+}
+
+.modal-lg {
+    max-width: 75% !important;
+}
+
+.welcome {
+    text-align: center;
+}
+
+
+.modalSumbit {
+    margin-top: 10px;
+}
 /* HERO */
 #hero-ctn {
     width: 100%;
