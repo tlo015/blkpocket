@@ -7,7 +7,7 @@ module.exports = function(app){
   var admin = require('./routes/admin');
 
   app.use('/', index);
-  app.use('/user', user);
+  app.use('/users', user);
   app.use('/payment', payment);
   app.use('/product', product);
   app.use('/admin', admin);
