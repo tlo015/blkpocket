@@ -2,6 +2,13 @@
 
 module.exports = function (sequelize, DataTypes) {
   const Product = sequelize.define('Product', {
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
     sku: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,6 +29,13 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1]
       }
+    },
+    stones: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }      
     },
     regular_price: {
       type: DataTypes.INTEGER,
@@ -52,16 +66,16 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    }
+    },
   });
-  Product.associate = function (models) {
-    // associations can be defined here
-    Product.belongsTo(models.Category, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Product.associate = function (models) {
+  //   // associations can be defined here
+  //   Product.belongsTo(models.Category, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
 
   return Product;
 };

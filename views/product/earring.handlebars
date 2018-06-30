@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/assets/css/category.css">
+{{> nav }} 
+
+
+<br>
+    
+    <!-- CATEGORY LIST -->
+    <div class="container" id="category">
+        <img id="category-pic" src="/assets/img/ringbanner.jpg">
+
+            <br>
+
+        <div class="row" id="renderProducts">
+            {{#if product}}
+            {{#each product}} 
+            
+            <div class="col-md-3">
+                <!-- QUICK VIEW PICTURE CAROUSEL ON HOVER/CLICK ARROW -->
+                <a href="/product/product">
+                    <img class="preview-img" id="previewImg" src="/assets/img/sample-img.png">
+                    <p class="product-name" id="product_name"> {{ this.dataValues.product_name }} </p>
+                </a>
+                    <p class="product-price" id="regular_price"> ${{ this.dataValues.regular_price }}</p>
+            </div>
+
+            {{/each}}
+            {{/if}} 
+        </div>
+
+    </div>
+
+{{> footer}}
