@@ -9,15 +9,22 @@
             <li class="nav-item">
                 <a class="nav-link" id="my-account" href="/admin/admin">Admin</a>
             </li>
+
             {{#if isAuthenticated}}
-                    <li class="nav-item">
-                        <a class="nav-link" id="my-account"  href="/users/sign-out">Logout</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" id="my-account" data-toggle="modal" data-target="#login-modal">Login/Sign</a>
-                    </li>
-                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link" id="my-account"  href="/users/sign-out">Logout</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    {{!-- <a class="nav-link" id="my-account" data-toggle="modal" data-target="#login-modal">Login/Sign</a> --}}
+                    <a class="nav-link" id="my-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                        Login/Sign
+                    </a>
+                    {{> login-modal}}
+
+                </li>
+            {{/if}}
+
             <li class="nav-item">
                 <a class="nav-link" id="shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="fas fa-shopping-cart snipcart-checkout"></i>
