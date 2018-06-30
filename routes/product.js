@@ -3,9 +3,19 @@ var router  = express.Router();
 
 var product_controller = require('../controllers/product_controller');
 
+router.get('/category', product_controller.category);
+
+router.get('/ring', product_controller.ring);
+
+router.get('/necklace', product_controller.necklace);
+
+router.get('/earring', product_controller.earring);
+
 router.get('/product', product_controller.product);
 
-router.get('/category', product_controller.category);
+
+
+
 
 
 module.exports = router;
