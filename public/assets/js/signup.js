@@ -93,8 +93,8 @@ $(document).ready(function() {
     // Replace all alerts with modals
 
     var userData = {
-      firstname: firstNameInput.val().trim(),
-      lastname: lastNameInput.val().trim(),
+      firstName: firstNameInput.val().trim(),
+      lastName: lastNameInput.val().trim(),
       username: usernameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -105,7 +105,7 @@ $(document).ready(function() {
     }
 
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.firstname, userData.lastname, userData.username, userData.email, userData.password);
+    signUpUser(userData.firstName, userData.lastName, userData.username, userData.email, userData.password);
     firstNameInput.val("");
     lastNameInput.val("");
     emailInput.val("");
@@ -113,12 +113,14 @@ $(document).ready(function() {
     usernameInput.val("");
     repeatPasswordInput.val("");
     repeatEmailInput.val("");
-  });
+  }) 
 
   // Does a post to the signup route. If succesful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(username, email, password) {
+  function signUpUser(firstName, lastName, username, email, password) {
     $.post("/users/signup", {
+      firstName: firstName,
+      lastName: lastName,
       username: username,
       email: email,
       password: password

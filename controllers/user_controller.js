@@ -26,21 +26,27 @@ exports.signUpUser = function(req,res) {
   db.User.findAll({
     where: {username: req.body.username}
   }).then(function(users) {
+    console.log(JSON.stringify(req.body));
     if (users.length > 0) {
+      console.log("User Exists");
       res.json({
         duplicateUser: true
+        
       });
     //At some point, make sure that only one user can be associated with an email.
     } else {
+      console.log("User doesnt exists");
       db.User.create({
         firstName: req.body.firstName,
-        lasttName: req.body.lastName,
+        lastName: req.body.lastName,
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
       }).then(function() {
+        console.log("success");
         res.send({redirect: "/"});
       }).catch(function(err) {
+        console.log(JSON.stringify(err));
         res.json(err);
       });
     }
