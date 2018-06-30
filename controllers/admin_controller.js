@@ -9,7 +9,6 @@ exports.addAProduct = function (req, res) {
   console.log("========>")
   console.log(req.body);
   // Add id from  onto req.body
-  req.body.image_url = "test"
   db.Product.create(req.body).then(function(dbPost) {
     res.json(dbPost);
   });
