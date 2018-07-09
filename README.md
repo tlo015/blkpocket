@@ -2,6 +2,9 @@
 
 E-commerce page for a jewelry small business 
 
+See Live app:
+https://whispering-savannah-18362.herokuapp.com/product/earring/
+
 Functionalities include:
 
 The ability to add products into a database using Models and Controllers 
